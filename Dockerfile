@@ -1,4 +1,6 @@
-FROM php:8.1-cli-alpine
+ARG PHP_VERSION
+
+FROM php:$PHP_VERSION-cli-alpine
 
 MAINTAINER indapublic <mail@indapublic.com>
 

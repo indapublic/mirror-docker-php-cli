@@ -1,5 +1,5 @@
 build:
-	docker build . -t indapublic:php-cli
+	docker build --build-arg PHP_VERSION=$(PHP_VERSION) . -t indapublic/php-cli:$(PHP_VERSION)
 
-push:
-	docker push indapublic/php-cli:latest
+publish:
+	docker push indapublic/php-cli:$(PHP_VERSION)
