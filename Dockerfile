@@ -8,3 +8,5 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 
 RUN chmod +x /usr/local/bin/install-php-extensions && \
     install-php-extensions amqp intl mysqli opcache pcntl pdo pdo_mysql phar redis xsl zip
+
+RUN apk add shadow && usermod -u 1000 www-data
